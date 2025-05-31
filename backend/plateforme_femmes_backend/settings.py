@@ -19,9 +19,15 @@ INSTALLED_APPS = [
     'users',
     'nip_verification',
     'document_upload',
+    
+    
+
+
 ]
 
 AUTH_USER_MODEL = 'users.Participante'
+
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -55,6 +61,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 
 CORS_ALLOW_ALL_ORIGINS = True
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

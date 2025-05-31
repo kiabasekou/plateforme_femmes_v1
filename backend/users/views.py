@@ -1,4 +1,3 @@
-
 from rest_framework.generics import CreateAPIView
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny, IsAuthenticated
@@ -14,8 +13,8 @@ from .serializers import (
 
 class RegisterView(CreateAPIView):
     queryset = Participante.objects.all()
-    permission_classes = [AllowAny]
     serializer_class = RegistrationSerializer
+    permission_classes = [AllowAny]
 
 class LoginView(TokenObtainPairView):
     serializer_class = CustomTokenObtainPairSerializer
